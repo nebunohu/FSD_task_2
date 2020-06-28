@@ -1,0 +1,12 @@
+//-
+    options.title - buttons title
+    options.isActive - if true, button is active
+    options.isColored - if true, button is transparent
+mixin btn(options)
+    -
+        let activeClassName = options.isActive ? "activeBtn" : "inActiveBtn";
+        let colorClassName = options.isColored ? "coloredBtn" : "notColoredBtn";
+
+    button(class = activeClassName+" "+colorClassName)= options.title
+
+
