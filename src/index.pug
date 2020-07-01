@@ -1,34 +1,66 @@
 include ./components/buttons/button
+include ./components/logo/logo
 
 doctype html
 html(lang="ru")
     head
         // ...
         meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width")
         title Toxin - бронирование номеров
         link(rel="stylesheet", href="./scss/styles.scss")
     body
         header
-            .logoWrapper
-                img(src="./images/TOXIN.svg")
+            +logo
             .menuWrapper
                 a О нас
                 a Услуги
                 a Вакансии
                 a Новости
                 a Соглашения
-            .headerBtnWrapper
-                +btn({title: "Войти", isActive: true, isColored: false})
-                +btn({title: "Зарегистрироваться", isActive: true, isColored: true})
+                .headerBtnWrapper
+                    +btn({title: "Войти", isActive: true, isColored: false})
+                    +btn({title: "Зарегистрироваться", isActive: true, isColored: true})
 
-        .bgImageWrapper
         .content
+            .selectionWindow
         .navSection
+            .toxinLettering
+                +logo
+                p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             nav(class="navigation")
+                ul
+                    li
+                        h3 Навигация
+                    li О нас
+                    li Новости
+                    li Служба поддержки
+                    li Услуги
             nav(class="aboutUs")
+                ul
+                    li
+                        h3 О нас
+                    li О сервисе
+                    li Наша команда
+                    li Вакансии
+                    li Инвесторы
             nav(class="support")
+                ul
+                    li
+                        h3 Служба поддержки
+                    li Соглашения
+                    li Сообщества
+                    li Связь с нами
             .subscription
+                h3 Подписка
+                p Получайте специальные предложения и новости сервиса
+                input(placeholder="E-mail")
 
 
         footer
+            p Copyright © 2018 Toxin отель. Все права зачищены.
+            .socNetsWrapper
+                img(src="/icons/logo_twitter.svg")
+                img(src="/icons/logo_facebook.svg")
+                img(src="/icons/logo_inst.svg")
         script(src="./js/index.js")

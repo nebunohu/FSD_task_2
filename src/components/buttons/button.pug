@@ -7,6 +7,6 @@ mixin btn(options)
         let activeClassName = options.isActive ? "activeBtn" : "inActiveBtn";
         let colorClassName = options.isColored ? "coloredBtn" : "notColoredBtn";
 
-    button(class = activeClassName+" "+colorClassName)= options.title
+    div(class ="btn "+activeClassName+" "+colorClassName)= options.title
 
 
