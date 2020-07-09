@@ -1,0 +1,11 @@
+link(rel="stylesheet", href="./scss/components/text-field.scss")
+
+mixin textField(options)
+    .textFieldWrapper
+        if options.description
+            span(class="textDescription")=options.description
+        .textField
+
+            input(type=options.type placeholder=options.placeHolder)
+            if options.button
+                input(type="submit" value="")

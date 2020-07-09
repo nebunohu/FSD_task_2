@@ -1,0 +1,8 @@
+
+mixin expandableCheckboxList(options)
+    .expandableCheckboxList
+    each val, index in options.names
+        .expandableCheckboxList__checkbox
+            .checkbox
+            input(class="expandableCheckboxList__checkbox" id=val.name name=val.name)
+            label(for=val.name)=val.label
