@@ -1,0 +1,8 @@
+//
+    options.id
+    options.label
+    options.caption
+mixin richCheckboxButton(options)
+    .richCheckboxButton
+        +checkbox({label: options.label, id: options.id, block: "richCheckboxButton"})
+        .richCheckboxButton__caption=options.caption

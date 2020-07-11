@@ -1,12 +1,28 @@
+style
+    include button.scss
 //-
     options.title - buttons title
     options.isActive - if true, button is active
     options.isColored - if true, button is transparent
 mixin btn(options)
     -
-        let activeClassName = options.isActive ? "activeBtn" : "inActiveBtn";
-        let colorClassName = options.isColored ? "coloredBtn" : "notColoredBtn";
+        let active = options.isActive;
+        let colored = options.isColored;
+        let btnClass = "button";
 
-    div(class ="btn "+activeClassName+" "+colorClassName)= options.title
+        if (!active) {
+            btnClass += " button_inactive";
+        }
+
+        if (colored) {
+            btnClass += " button_colored";
+        }
+
+        if(options.block) {
+            btnClass += " " + options.block+"__button";
+
+        }
+
+    div(class = btnClass)=options.title
 
 

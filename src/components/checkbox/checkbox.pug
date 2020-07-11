@@ -1,0 +1,17 @@
+//
+    options.id - идентификатор чекбокса
+    options.label - подпись чекбокса
+    options.block - блок, в котором находится чекбокс
+mixin checkbox(options)
+    -
+        let blockClass = "checkbox";
+
+        if(options.block) {
+            blockClass += " " + options.block + "__checkbox";
+        }
+
+    label(class=blockClass for=options.id)
+        input(class="checkbox__input" type="checkbox" id=options.id name=options.id)
+        .checkbox__box
+            .checkbox__checkmark
+        span(class="checkbox__label")=options.label

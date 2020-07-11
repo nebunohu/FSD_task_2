@@ -1,9 +1,9 @@
-.checkbox {
-  width: 6px;
-  height: 8px;
+@import "__listName/__listName";
+@import "__listWrapper/__listWrapper";
+@import "__checkbox/__checkbox";
+@import "__input/__input";
+@import "__arrow/__arrow";
 
-  /* Primary Gradient */
+.expandableCheckboxList {
 
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  transform: rotate(45deg);
 }

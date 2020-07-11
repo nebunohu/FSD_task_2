@@ -1,0 +1,16 @@
+//
+    options.icon - иконка характерной черты
+    options.name - название характерной черты
+    options.caption - описание характерной черты
+
+mixin feature(options)
+    .feature
+        .feature__iconWrapper
+            case options.icon
+                when 0xE815
+                    span(class="material-icons feature__icon") &#xE815;
+                when 0xE7F1
+                    span(class="material-icons feature__icon") &#xE7F1;
+        .feature__captionWrapper
+            .feature__name=options.name
+            .feature__caption=options.caption

@@ -1,0 +1,7 @@
+.expandableCheckboxList__listWrapper {
+  display: none;
+}
+
+.expandableCheckboxList__input:checked ~ .expandableCheckboxList__listWrapper {
+  display: block;
+}

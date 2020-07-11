@@ -1,7 +1,9 @@
-mixin logo
-    .toxinWrapper
+link(rel="stylesheet", href="./components/logo/logo.scss")
+
+mixin logo(options)
+    .logo
         .logoWrapper
             img(id="img0" src="./icons/Vector.svg")
             img(id="img1" src="./icons/Vector-1.svg")
             img(id="img2" src="./icons/Vector-2.svg")
-        img(id="toxinLettering" src="./images/TOXIN.svg")
+        img(class="logoLettering" src="./images/TOXIN.svg")

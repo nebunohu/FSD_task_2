@@ -1,0 +1,63 @@
+input {
+  padding-left: 15px;
+  font-family: Montserrat, Arial, sans-serif;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+input:focus::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.navSection__textFieldWrapper {
+  margin: 20px 0 0 0;
+}
+
+.textFieldWrapper .textDescription {
+  display: block;
+  margin: 0 0 5px 0;
+  font-family: Montserrat, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  /* Dark 100% */
+
+  color: #1F2041;
+}
+
+.textField {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 260px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.textField input {
+  font-family: Montserrat, Arial, sans-serif;
+  border: none;
+  outline: none;
+  -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+}
+
+.textField input[type="submit"] {
+  width: 44px;
+  border: none;
+  background: url(/icons/arrow_forward.svg) no-repeat 50% 50%;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 22px;
+  padding: 15px 20px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: 2px solid #BC9CFF;
+  background: #FFF;
+  color: #BC9CFF;
+  cursor: pointer;
+  width: max-content;
+  height: 44px;
+}
+
+.button_colored {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: none;
+  color: #FFFFFF;
+}
+
+.button_inactive {
+
+}
+
+.head__button {
+  padding: 10px 20px;
+  margin-right: 20px;
+}

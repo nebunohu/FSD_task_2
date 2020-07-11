@@ -1,0 +1,19 @@
+//
+    options.name - назввание группы радиокнопок
+    options.labels[0] - подписи радио кнопки
+    options.id[0] - id радио кнопки
+    options.block - блок, в котором находится радио кнопка
+mixin radioButton(options)
+    -
+        let blockClass = "radioButton";
+        if(options.block) {
+            blockClass += " " + options.block +"__radioButton";
+        }
+
+    div(class=blockClass)
+        each label, index in options.labels
+            .radioButton__radioWrapper
+                input(class="radioButton__input" type="radio" name=options.name id=options.id[index])
+                .radioButton__box
+                    .radioButtom__checkmark
+                label(class="radioButton__label" for=options.id[index])=label

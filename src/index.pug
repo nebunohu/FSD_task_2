@@ -1,5 +1,11 @@
 include ./components/button/button
 include ./components/logo/logo
+include ./components/textField/textField
+include ./components/dropdown/dropdown
+include ./components/expandableCheckboxList/expandableCheckboxList
+include ./components/feature/feature
+include ./components/richCheckboxButton/richCheckboxButton
+include ./components/radioButton/radioButton
 
 doctype html
 html(lang="ru")
@@ -8,27 +14,34 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width")
         title Toxin - бронирование номеров
-        link(rel="stylesheet", href="./scss/styles.scss")
+        link(rel="stylesheet", href="./styles.scss")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     body
         header
             +logo
-            .menuWrapper
+            .head__menuWrapper
                 a О нас
                 a Услуги
                 a Вакансии
                 a Новости
                 a Соглашения
-                .headerBtnWrapper
-                    +btn({title: "Войти", isActive: true, isColored: false})
-                    +btn({title: "Зарегистрироваться", isActive: true, isColored: true})
-
+                .head__btnWrapper
+                    +btn({title: "Войти", isActive: true, isColored: false, block: "head"})
+                    +btn({title: "Зарегистрироваться", isActive: true, isColored: true, block: "head"})
         .content
-            .selectionWindow
+            .content__selectionWindow
+
+                +radioButton({
+                    name: "gender",
+                    labels: ["Мужчина", "Женщина"],
+                    id: ["male", "female"],
+                    block: "content"
+                })
         .navSection
-            .toxinLettering
+            .navSection__aboutHotel
                 +logo
                 p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-            nav(class="navigation")
+            nav(class="navSection__navigation")
                 ul
                     li
                         h3 Навигация
@@ -36,7 +49,7 @@ html(lang="ru")
                     li Новости
                     li Служба поддержки
                     li Услуги
-            nav(class="aboutUs")
+            nav(class="navSection__aboutUs")
                 ul
                     li
                         h3 О нас
@@ -44,18 +57,17 @@ html(lang="ru")
                     li Наша команда
                     li Вакансии
                     li Инвесторы
-            nav(class="support")
+            nav(class="navSection__support")
                 ul
                     li
                         h3 Служба поддержки
                     li Соглашения
                     li Сообщества
                     li Связь с нами
-            .subscription
+            .navSection__subscription
                 h3 Подписка
                 p Получайте специальные предложения и новости сервиса
-                input(placeholder="E-mail")
-
+                //+textField({type: "email", placeHolder: "Email", button: true})
 
         footer
             p Copyright © 2018 Toxin отель. Все права зачищены.

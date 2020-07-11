@@ -1,8 +1,23 @@
-
+include ../checkbox/checkbox
+//
+    options.block - название блока в котором располагается список чекбоксов
+    options.names[0].name - имя для атрибута id и name
+    options.names[0].label - подпись элемента списка
 mixin expandableCheckboxList(options)
-    .expandableCheckboxList
-    each val, index in options.names
-        .expandableCheckboxList__checkbox
-            .checkbox
-            input(class="expandableCheckboxList__checkbox" id=val.name name=val.name)
-            label(for=val.name)=val.label
+    -
+        let blockClass = "expandableCheckboxList";
+        if(options.block) {
+            blockClass += " "+options.block+"__expandableCheckboxList"
+        }
+
+    div(class=blockClass)
+        label(class="expandableCheckboxList__listName" for="expandableCheckboxList__input")
+            input(class="expandableCheckboxList__input" type="checkbox" id="expandableCheckboxList__input")
+            span=options.listName
+            i(class="material-icons md-48 expandableCheckboxList__arrow") &#xe313
+            .expandableCheckboxList__arrow
+        .expandableCheckboxList__listWrapper
+            each val in options.names
+                .expandableCheckboxList__checkBox
+                    +checkbox(val)
+

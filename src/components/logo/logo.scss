@@ -1,0 +1,32 @@
+.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  //  margin: 0 0 0 140px;
+}
+
+.logoWrapper {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.logoWrapper img {
+  position: absolute;
+}
+
+.logoWrapper #img0 {
+  position: absolute;
+  top: 15px;
+  left: 9px;
+}
+
+.logoWrapper #img1 {
+  position: absolute;
+  top: 15px;
+  left: 21px;
+}
+
+.logoLettering {
+  margin-left: 12px;
+}
