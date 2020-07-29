@@ -6,6 +6,9 @@ include ./components/expandableCheckboxList/expandableCheckboxList
 include ./components/feature/feature
 include ./components/richCheckboxButton/richCheckboxButton
 include ./components/radioButton/radioButton
+include ./components/toggle/toggle
+include ./components/likeButton/likeButton
+include ./components/bulletList/bulletList
 
 doctype html
 html(lang="ru")
@@ -30,13 +33,6 @@ html(lang="ru")
                     +btn({title: "Зарегистрироваться", isActive: true, isColored: true, block: "head"})
         .content
             .content__selectionWindow
-
-                +radioButton({
-                    name: "gender",
-                    labels: ["Мужчина", "Женщина"],
-                    id: ["male", "female"],
-                    block: "content"
-                })
         .navSection
             .navSection__aboutHotel
                 +logo

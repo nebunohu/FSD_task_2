@@ -4,3 +4,7 @@
   justify-content: start;
   align-items: center;
 }
+
+.radioButton__radioWrapper:not(:first-child) {
+  margin: 0 0 0 20px;
+}

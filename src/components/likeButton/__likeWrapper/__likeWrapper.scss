@@ -1,0 +1,24 @@
+.likeButton .likeButton__likeWrapper {
+  margin: 0 0 0 -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 18px;
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 9px;
+
+  text-align: center;
+
+  /* Dark 25% */
+
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.likeButton__input:checked ~ .likeButton__label .likeButton__likeWrapper {
+  color: #BC9CFF;
+}

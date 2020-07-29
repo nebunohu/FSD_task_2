@@ -1,0 +1,9 @@
+//
+    options.block - блок, к которому принадлежит список
+mixin bulletList(options)
+    -
+        let blockClass = "bulletList";
+        if (options.block) {
+            blockClass += " " + options.block + "__bulletList";
+        }
+

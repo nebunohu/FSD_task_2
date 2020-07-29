@@ -1,0 +1,12 @@
+@import "__input/__input";
+@import "__likeWrapper/__likeWrapper";
+@import "__likesCountWrapper/__likesCountWrapper";
+@import "__label/__label";
+
+.likeButton {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+}

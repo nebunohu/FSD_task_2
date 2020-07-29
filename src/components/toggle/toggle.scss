@@ -1,0 +1,11 @@
+@import "__toggleBox/__toggleBox";
+@import "__toggleCheckmark/__toggleChecknark";
+@import "__input/__input";
+@import "__label/__label";
+
+.toggle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}

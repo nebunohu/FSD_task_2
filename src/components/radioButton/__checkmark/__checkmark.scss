@@ -1,0 +1,16 @@
+.radioButton__checkmark {
+  display: none;
+
+  width: 12px;
+  height: 12px;
+
+  /* Primary Gradient */
+
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 10px;
+}
+
+.radioButton__input:checked ~ .radioButton__box .radioButton__checkmark {
+  display: block;
+}
+

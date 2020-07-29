@@ -1,0 +1,17 @@
+//
+    options.label - подпись переключателя
+    options.id - id переключателя
+    options.block - блок, к которому принадлежит переключатель
+
+mixin toggle(options)
+    -
+        let blockClass = "toggle";
+        if (options.block) {
+            blockClass += " " + options.block + "__toggle";
+        }
+
+    div(class=blockClass)
+        input(class="toggle__input" type="checkbox" id=options.id)
+        label(class="toggle__toggleBox" for=options.id)
+            .toggle__toggleCheckmark
+        span(class="toggle_label")=options.label

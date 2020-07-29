@@ -1,0 +1,19 @@
+//
+    options.id - id кнопки
+    options.likesCount - количество лайков
+    options.block - блок, к которому принадлежит кнопка
+
+mixin likeButton(options)
+    -
+        let blockClass = "likeButton";
+        if (options.block) {
+            blockClass += " " + options.block + "__likeButton";
+        }
+
+    div(class=blockClass)
+        input(class="likeButton__input" type="checkbox" id=options.id)
+        label(class="likeButton__label" for=options.id)
+            div(class="likeButton__likeWrapper material-icons") &#xe87e
+            .likeButton__likesCountWrapper=options.likesCount
+
+
